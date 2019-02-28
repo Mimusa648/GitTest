@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Regex</title>
+</head>
+<script type="text/javascript">
+
+	function validNumber() {
+		let regex = /^((0042119|\+4219|09)[0-9]{8})$/
+		let num = document.getElementById("number").value;
+		if(regex.test(num)){
+			console.log("ide");
+			document.getElementById("img1").src ="wink.png"
+		}else{
+			console.log("nejde");
+			document.getElementById("img1").src ="sad.png"
+		}
+	}
+</script>
+<body>
+<label>Telephone number:</label>
+<input type="text" id="number">
+<button id="over" onclick="validNumber()">Confirm</button>
+<div> <img src=""  id="img1" style="width: 20%"></div>
+</body>
+</html>
